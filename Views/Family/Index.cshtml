@@ -10,7 +10,9 @@
         <div class="col-6">
             <h2 class=" text-primary">Моя семья</h2>
         </div>
-        <div class="col-6">Create new item</div>
+        <div class="col-6">
+            <a class="btn btn-primary"><h6>Create new item</h6></a>
+        </div>
         
     </div>
    @if (Model.Any())
@@ -37,10 +39,13 @@
                         <td>
                         </td>
                         <td>
-                            @item.Id
+                            @item.Name
                         </td>
                         <td>
-                            @item.Name
+                            @item.Age
+                        </td>
+                        <td>
+                            @item.Gender
                         </td>
                     </tr>
                 }
