@@ -11,18 +11,45 @@
             <h2 class=" text-primary">Моя семья</h2>
         </div>
         <div class="col-6">Create new item</div>
+        
     </div>
+   @if (Model.Any())
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Номер
+                    </th>
+                    <th>
+                        Имя
+                    </th>
+                    <th>
+                        Возраст
+                    </th>
+                </tr>
+            </thead>
+            <tbodey>
 
-    @if (Model.Any())
-     {
-         @foreach (var item in Model)
-          {
-              <div>@item.Id - @item.Name</div>
-          }
-     }
-     else
-     {
-          <p>It is empty</p>
-     }
-    
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            @item.Id
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                    </tr>
+                }
+            </tbodey>
+        </table>
+    }
+    else
+    {
+        <p>It is empty</p>
+    }
+
 </div>
