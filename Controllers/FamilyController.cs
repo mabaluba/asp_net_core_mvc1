@@ -21,7 +21,7 @@ namespace asp_net_core_mvc1.Controllers
 
             return View(familyList);
         }
-        public IActionResult Create()
+        public IActionResult CreatePerson()
         {
             return View();
         }
