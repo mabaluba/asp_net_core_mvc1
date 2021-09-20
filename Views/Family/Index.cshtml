@@ -3,17 +3,14 @@
     ViewData["Title"] = "Family";
 }
 
-<h1>Index - Family</h1>
-
 <div class="container p-3">
     <div class="raw pt-4">
-        <div class="col-6">
-            <h2 class=" text-primary">Моя семья</h2>
+        <div class="col-6 text-right">
+            <h2 class="text-primary">Моя семья</h2>
         </div>
-        <div class="col-6">
-            <a class="btn btn-primary"><h6>Create new item</h6></a>
+        <div class="col-6 p-3 text-right">
+            <a class="btn btn-primary" asp-controller="Family" asp-action="Create"><h6>Create new item</h6></a>
         </div>
-        
     </div>
    @if (Model.Any())
     {
