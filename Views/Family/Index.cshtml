@@ -6,10 +6,10 @@
             <h2 class="text-primary">Моя семья</h2>
         </div>
         <div class="col-6 p-3 text-right">
-            <a class="btn btn-primary" asp-controller="Family" asp-action="CreatePerson"><h6>Create new item</h6></a>
+            <a class="btn btn-primary" asp-controller="Family" asp-action="CreatePerson"><h6>Создать новенького</h6></a>
         </div>
     </div>
-   @if (Model.Any())
+   @if (Model.Any())//if Model is not empty - fill the table
     {
         <table class="table table-bordered table-striped">
             <thead>
@@ -23,6 +23,9 @@
                     <th>
                         Возраст
                     </th>
+                    <th>
+                        Пол
+                    </th>
                 </tr>
             </thead>
             <tbodey>
@@ -31,6 +34,7 @@
                 {
                     <tr>
                         <td>
+                            @item.Id
                         </td>
                         <td>
                             @item.Name
