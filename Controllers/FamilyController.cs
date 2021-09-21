@@ -21,9 +21,19 @@ namespace asp_net_core_mvc1.Controllers
 
             return View(familyList);
         }
+        [HttpGet]
         public IActionResult CreatePerson()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreatePerson(Family obj)
+        {
+            db.Persons.Add(obj);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
